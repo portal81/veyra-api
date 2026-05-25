@@ -79,7 +79,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
-// Health check
+// Health checks
 app.MapGet("/", () => Results.Ok(new { status = "healthy", version = "1.0.0" }));
+app.MapGet("/health", () => Results.Ok(new { status = "healthy" }));
 
 app.Run();

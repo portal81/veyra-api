@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: veyra-api
+    runtime: image
+    plan: free
+    repo: https://github.com/portal81/veyra-api
+    branch: master
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
